@@ -1,5 +1,7 @@
 package quincy.registry.zk;
 
+import enums.LoadBalanceEnum;
+import extension.ExtensionLoader;
 import quincy.loadbalance.LoadBalance;
 import quincy.remoting.dto.RpcRequest;
 import quincy.registry.ServiceDiscovery;
@@ -16,7 +18,7 @@ public class ZkServiceDiscoveryImpl implements ServiceDiscovery {
     private final LoadBalance loadBalance;
 
     public ZkServiceDiscoveryImpl() {
-
+        this.loadBalance = ExtensionLoader.getExtensionLoader(LoadBalance.class).getExtension(LoadBalanceEnum.LOADBALANCE.getName());
     }
 
     @Override
