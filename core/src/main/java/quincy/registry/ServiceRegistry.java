@@ -1,4 +1,4 @@
-package quincy.remoting.registry;
+package quincy.registry;
 
 import extension.SPI;
 
