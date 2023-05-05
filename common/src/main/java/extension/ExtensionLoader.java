@@ -20,6 +20,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * @author quincy
  * @create 2023 - 05 - 05 18:59
  */
+// TODO: 需要再次理解扩展加载类
 @Slf4j
 public final class ExtensionLoader<T> {
 
@@ -135,6 +136,7 @@ public final class ExtensionLoader<T> {
         }
     }
 
+    // TODO：此处对加载资源的规则还不是很懂
     private void loadResource(Map<String, Class<?>> extensionClasses, ClassLoader classLoader, URL resourceUrl) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(resourceUrl.openStream(), UTF_8))) {
             String line;
