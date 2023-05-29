@@ -1,7 +1,7 @@
 package extension;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import utils.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -64,7 +64,7 @@ public final class ExtensionLoader<T> {
 
 
     public T getExtension(String name) {
-        if (StringUtils.isEmpty(name)) {
+        if (StringUtils.isBlank(name)) {
             throw new IllegalArgumentException("Extension name must not be empty");
         }
         Holder<Object> holder = cachedInstances.get(name);

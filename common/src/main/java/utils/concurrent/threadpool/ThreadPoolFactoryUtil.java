@@ -1,8 +1,7 @@
 package utils.concurrent.threadpool;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.curator.shaded.com.google.common.util.concurrent.ThreadFactoryBuilder;
-import sun.nio.ch.ThreadPool;
 
 import java.util.Map;
 import java.util.concurrent.*;

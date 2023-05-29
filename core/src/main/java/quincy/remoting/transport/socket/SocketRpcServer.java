@@ -7,7 +7,6 @@ import quincy.config.RpcServiceConfig;
 import quincy.provider.ServiceProvider;
 import quincy.provider.impl.ZkServiceProviderImpl;
 import quincy.remoting.transport.netty.server.NettyRpcServer;
-import sun.nio.ch.ThreadPool;
 import utils.concurrent.threadpool.ThreadPoolFactoryUtil;
 
 import java.io.IOException;
